@@ -12,9 +12,9 @@ class Example2 extends StatelessWidget {
         backgroundColor: Colors.black38,
         title: const Center(
             child: Text(
-          'Example 2',
-          style: TextStyle(color: Colors.blue),
-        )),
+              'Example 2',
+              style: TextStyle(color: Colors.blue),
+            )),
       ),
       body: Parallax(
         sensor: ParallaxSensor.accelerometer,
@@ -22,34 +22,38 @@ class Example2 extends StatelessWidget {
         layers: [
           Layer(
             sensitivity: 1,
-            image: const AssetImage('assets/example2/layer 6.png'),
+            widget: Image.asset('assets/example2/layer 6.png'),
             preventCrop: true,
           ),
           Layer(
             sensitivity: 5,
-            image: const AssetImage('assets/example2/layer 5.png'),
+            widget: Image.asset('assets/example2/layer 5.png'),
             preventCrop: true,
           ),
           Layer(
-              sensitivity: 10,
-              image: const AssetImage('assets/example2/layer 4.png'),
-              preventCrop: true,
-              offset: const Offset(0, 200)),
+            sensitivity: 10,
+            widget: Image.asset('assets/example2/layer 4.png'),
+            preventCrop: true,
+            offset: const Offset(0, 200),
+          ),
           Layer(
-              sensitivity: 15,
-              image: const AssetImage('assets/example2/layer 3.png'),
-              preventCrop: true,
-              offset: const Offset(0, 150)),
+            sensitivity: 15,
+            widget: Image.asset('assets/example2/layer 3.png'),
+            preventCrop: true,
+            offset: const Offset(0, 150),
+          ),
           Layer(
-              sensitivity: 20,
-              image: const AssetImage('assets/example2/layer 2.png'),
-              preventCrop: true,
-              offset: const Offset(0, 150)),
+            sensitivity: 20,
+            widget: Image.asset('assets/example2/layer 2.png'),
+            preventCrop: true,
+            offset: const Offset(0, 150),
+          ),
           Layer(
-              sensitivity: 25,
-              image: const AssetImage('assets/example2/layer 1.png'),
-              preventCrop: true,
-              offset: const Offset(0, -490)),
+            sensitivity: 25,
+            widget: Image.asset('assets/example2/layer 1.png'),
+            preventCrop: true,
+            offset: const Offset(0, -490),
+          ),
         ],
         child: Center(
           child: Column(

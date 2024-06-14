@@ -12,38 +12,41 @@ class Example1 extends StatelessWidget {
         backgroundColor: Colors.black38,
         title: const Center(
             child: Text(
-          'Example 1',
-          style: TextStyle(color: Colors.blue),
-        )),
+              'Example 1',
+              style: TextStyle(color: Colors.blue),
+            )),
       ),
       body: Parallax(
         sensor: ParallaxSensor.gyroscope,
         layers: [
           Layer(
             sensitivity: 1,
-            image: const AssetImage('assets/example1/background.jpeg'),
+            widget: Image.asset('assets/example1/background.jpeg'),
             preventCrop: true,
           ),
           Layer(
             sensitivity: 4,
-            image: const AssetImage('assets/example1/stars.png'),
+            widget: Image.asset('assets/example1/stars.png'),
             preventCrop: true,
           ),
           Layer(
-              sensitivity: 7,
-              image: const AssetImage('assets/example1/nebula.png'),
-              preventCrop: true,
-              opacity: 0.7),
+            sensitivity: 7,
+            widget: Image.asset('assets/example1/nebula.png'),
+            preventCrop: true,
+            opacity: 0.7,
+          ),
           Layer(
-              sensitivity: 10,
-              image: const AssetImage('assets/example1/stars2.png'),
-              preventCrop: true,
-              opacity: 0.7),
+            sensitivity: 10,
+            widget: Image.asset('assets/example1/stars2.png'),
+            preventCrop: true,
+            opacity: 0.7,
+          ),
           Layer(
-              sensitivity: 13,
-              image: const AssetImage('assets/example1/planet.png'),
-              imageHeight: 150,
-              imageFit: BoxFit.fitHeight),
+            sensitivity: 13,
+            widget: Image.asset('assets/example1/planet.png'),
+            imageHeight: 150,
+            imageFit: BoxFit.fitHeight,
+          ),
         ],
         child: Center(
           child: Column(
